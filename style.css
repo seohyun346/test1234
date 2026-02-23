@@ -1,1 +1,38 @@
-/* Add styles here */
+:root {
+  --bg: #ffffff;
+  --text: #1b1f23;
+  --button-bg: #f2f4f7;
+  --button-border: #d0d7de;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0d1117;
+  --text: #e6edf3;
+  --button-bg: #21262d;
+  --button-border: #30363d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#theme-toggle {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--button-border);
+  border-radius: 8px;
+  background: var(--button-bg);
+  color: var(--text);
+  cursor: pointer;
+}
