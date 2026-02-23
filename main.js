@@ -10,7 +10,9 @@ function getPreferredTheme() {
 
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
-  toggleButton.textContent = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  if (toggleButton) {
+    toggleButton.textContent = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  }
 }
 
 function toggleTheme() {
@@ -21,4 +23,6 @@ function toggleTheme() {
 }
 
 applyTheme(getPreferredTheme());
-toggleButton.addEventListener("click", toggleTheme);
+if (toggleButton) {
+  toggleButton.addEventListener("click", toggleTheme);
+}

@@ -28,11 +28,26 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-#theme-toggle {
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#theme-toggle,
+.action-button {
   padding: 0.6rem 1rem;
   border: 1px solid var(--button-border);
   border-radius: 8px;
   background: var(--button-bg);
   color: var(--text);
   cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+}
+
+.lotto-result {
+  min-height: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
 }
